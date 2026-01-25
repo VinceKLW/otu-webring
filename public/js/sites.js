@@ -13,8 +13,16 @@ function normalizeUrl(url) {
 
 // Find site index by URL
 function findSiteIndex(fromUrl) {
+    if (!fromUrl) return -1;
     const normalized = normalizeUrl(fromUrl);
-    return sites.findIndex(site => normalizeUrl(site.url) === normalized);
+    console.log('Finding site index for:', fromUrl, 'normalized to:', normalized);
+    const index = sites.findIndex(site => {
+        const siteNormalized = normalizeUrl(site.url);
+        console.log('Comparing:', normalized, 'with', siteNormalized, 'from', site.url);
+        return siteNormalized === normalized;
+    });
+    console.log('Found index:', index);
+    return index;
 }
 
 // Get next site (wraps around)

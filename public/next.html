@@ -14,20 +14,59 @@
     <script src="js/sites.js"></script>
     <script src="js/tracking.js"></script>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const from = params.get('from');
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            // Decode the from parameter (URLSearchParams.get already decodes, but be explicit)
+            let from = params.get('from') || '';
+            // Remove any extra encoding
+            try {
+                from = decodeURIComponent(from);
+            } catch (e) {
+                // Already decoded or invalid
+            }
 
-        const site = getNextSite(from || '');
-        
-        // Track the redirect
-        if (typeof trackRedirect === 'function') {
-            trackRedirect(site.url, 'next');
-        }
-        
-        // Small delay to ensure tracking is sent
-        setTimeout(() => {
-            window.location.href = site.url;
-        }, 100);
+            function doRedirect() {
+                if (typeof getNextSite !== 'function') {
+                    console.error('getNextSite not available yet');
+                    return false;
+                }
+
+                console.log('From URL parameter:', from);
+                const site = getNextSite(from);
+                console.log('Next site result:', site);
+                
+                if (!site || !site.url) {
+                    console.error('Invalid site returned, redirecting to main page');
+                    window.location.href = 'https://otu-ring.com';
+                    return false;
+                }
+                
+                console.log('Redirecting to:', site.url);
+                
+                // Track the redirect
+                if (typeof trackRedirect === 'function') {
+                    trackRedirect(site.url, 'next');
+                }
+                
+                // Small delay to ensure tracking is sent
+                setTimeout(() => {
+                    window.location.href = site.url;
+                }, 100);
+                return true;
+            }
+
+            // Try immediately, or wait for scripts
+            if (typeof getNextSite === 'function') {
+                doRedirect();
+            } else {
+                window.addEventListener('load', () => {
+                    if (!doRedirect()) {
+                        // Fallback after load
+                        setTimeout(doRedirect, 100);
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
