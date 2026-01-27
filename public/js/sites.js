@@ -2,8 +2,8 @@
 const sites = [
     { name: "Vincent Wong", url: "https://vinceklwong.com", year: 2027, desc: "Software Engineer" },
     { name: "Shams Haroon", url: "https://shamsharoon.com", year: 2027, desc: "Software Engineer" },
-    { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2028, desc: "Software Engineer" },
-    { name: "Jon McKesey", url: "https://jonathanmckesey.com/", year: 2028, desc: "Software Engineer" }
+    { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2026, desc: "Software Engineer" },
+    { name: "Jon McKesey", url: "https://jonathanmckesey.com/", year: 2027, desc: "Software Engineer" }
 ];
 
 // Helper to normalize URLs for comparison
