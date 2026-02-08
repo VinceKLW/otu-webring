@@ -3,7 +3,8 @@ const sites = [
     { name: "Vincent Wong", url: "https://vinceklwong.com" },
     { name: "Shams Haroon", url: "https://shamsharoon.com" },
     { name: "Julian Cruzet", url: "https://juliancruzet.ca" },
-    { name: "Jon McKesey", url: "https://jonathanmckesey.com/" }
+    { name: "Jon McKesey", url: "https://jonathanmckesey.com/" },
+    { name: "Jun Bin Cheng", url: "https://jb-cheng.github.io/" }
 ];
 
 // Helper to normalize URLs for comparison
