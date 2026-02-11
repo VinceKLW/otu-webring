@@ -18,12 +18,15 @@ body {
     color: var(--text);
     min-height: 100vh;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     max-width: 520px;
-    margin: 0 auto;
-    padding: 140px 24px 80px;
+    width: 100%;
+    padding: 40px 24px;
 }
 
 header {
@@ -54,6 +57,39 @@ h1 {
 
 .desc a:hover {
     border-color: var(--text);
+}
+
+/* Tooltip */
+.tooltip-trigger {
+    position: relative;
+    color: var(--text);
+    border-bottom: 1px dashed var(--muted);
+    cursor: help;
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.7rem;
+    padding: 10px 12px;
+    width: 220px;
+    line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s;
+    pointer-events: none;
+    margin-top: 8px;
+    z-index: 10;
+}
+
+.tooltip-trigger:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Controls */
@@ -113,6 +149,36 @@ h1 {
 /* Sites List */
 .sites-list {
     list-style: none;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 12px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Scrollbar */
+.sites-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sites-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sites-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.sites-list::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+}
+
+/* Firefox scrollbar */
+.sites-list {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
 }
 
 .sites-list li {
