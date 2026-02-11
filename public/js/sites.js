@@ -5,7 +5,8 @@ const sites = [
     { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2027, recent_internship: "Royal Bank of Canada" },
     { name: "Jon McKesey", url: "https://jonathanmckesey.com/", year: 2027, recent_internship: "Verily" },
     { name: "Jun Bin Cheng", url: "https://jb-cheng.github.io/", year: 2026, recent_internship:"H.H Angus & Associates Ltd."},
-    { name: "Heather Meatherall", url: "https://heather-meatherall.github.io/", year: 2026, recent_internship: "Ontario Public Service" }
+    { name: "Heather Meatherall", url: "https://heather-meatherall.github.io/", year: 2026, recent_internship: "Ontario Public Service" },
+    { name: "Umad Akram", url: "https://www.umadakram.com/", year: 2027, recent_internship: "Canadian Imperial Bank of Commerce" }
 ];
 
 // YOU CAN ADD RECENT_INTERNSHIP OR GENERAL DESCRIPTION! (ex. Software Engineer, Full-Stack Developer, etc.)
