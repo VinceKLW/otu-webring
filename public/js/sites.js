@@ -2,9 +2,9 @@
 const sites = [
     { name: "Vincent Wong", url: "https://vinceklwong.com", year: 2027, recent_internship: "Shopify" },
     { name: "Shams Haroon", url: "https://shamsharoon.com", year: 2027, recent_internship: "Wealthsimple" },
-    { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2027, recent_internship: "Royal Bank of Canada" },
+    { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2027, recent_internship: "Shopify" },
     { name: "Jon McKesey", url: "https://jonathanmckesey.com/", year: 2027, recent_internship: "Verily" },
-    { name: "Jun Bin Cheng", url: "https://jb-cheng.github.io/", year: 2026, recent_internship:"H.H Angus & Associates Ltd."},
+    { name: "Jun Bin Cheng", url: "https://jb-cheng.github.io/", year: 2026, recent_internship: "H.H Angus & Associates Ltd." },
     { name: "Heather Meatherall", url: "https://heather-meatherall.github.io/", year: 2026, recent_internship: "Ontario Public Service" },
     { name: "Rosie Khurmi", url: "https://rosiekhurmi.github.io/Portfolio-Website/", year: 2027, recent_internship: "Bank of Montreal" },
     { name: "Umad Akram", url: "https://umadakram.com/", year: 2027, recent_internship: "Canadian Imperial Bank of Commerce" },
