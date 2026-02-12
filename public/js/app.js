@@ -2,8 +2,11 @@
 
 let currentSort = 'default';
 let searchQuery = '';
+// Random starting order for default view (set once per page load)
+let displayOrder = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    displayOrder = typeof getSitesStartingFromRandom === 'function' ? getSitesStartingFromRandom() : [...sites];
     renderSitesList();
     initControls();
     if (typeof initTracking === 'function') {
@@ -31,7 +34,8 @@ function initControls() {
 }
 
 function getFilteredSites() {
-    let filtered = [...sites];
+    // Default: use random-start order (still includes every site, ring order)
+    let filtered = currentSort === 'default' && displayOrder.length > 0 ? [...displayOrder] : [...sites];
 
     // Search filter
     if (searchQuery) {
@@ -42,7 +46,7 @@ function getFilteredSites() {
         );
     }
 
-    // Sort
+    // Sort (only when not default)
     if (currentSort === 'alpha') {
         filtered.sort((a, b) => a.name.localeCompare(b.name));
     } else if (currentSort === 'year') {

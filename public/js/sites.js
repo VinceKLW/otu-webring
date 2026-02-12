@@ -53,3 +53,11 @@ function getPrevSite(fromUrl) {
     const prevIndex = (index - 1 + sites.length) % sites.length;
     return sites[prevIndex];
 }
+
+// Get sites list starting from a random index (for display on main page).
+// Order is preserved: [start, start+1, ..., end, 0, 1, ..., start-1].
+function getSitesStartingFromRandom() {
+    if (sites.length === 0) return [];
+    const startIndex = Math.floor(Math.random() * sites.length);
+    return [...sites.slice(startIndex), ...sites.slice(0, startIndex)];
+}
