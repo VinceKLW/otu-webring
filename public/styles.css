@@ -150,25 +150,31 @@ h1 {
 .sites-list {
     list-style: none;
     max-height: 500px;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding-right: 12px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - always visible */
 .sites-list::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 .sites-list::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
 }
 
 .sites-list::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 4px;
     transition: background 0.2s;
+}
+
+/* Increase scrollbar opacity on hover/interaction */
+.sites-list:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .sites-list::-webkit-scrollbar-thumb:hover {
@@ -178,7 +184,11 @@ h1 {
 /* Firefox scrollbar */
 .sites-list {
     scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.05);
+}
+
+.sites-list:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
 }
 
 .sites-list li {

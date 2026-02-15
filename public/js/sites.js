@@ -31,11 +31,20 @@ function findSiteIndex(fromUrl) {
     if (!fromUrl) return -1;
     const normalized = normalizeUrl(fromUrl);
     console.log('Finding site index for:', fromUrl, 'normalized to:', normalized);
-    const index = sites.findIndex(site => {
+    // Try exact match first
+    let index = sites.findIndex(site => {
         const siteNormalized = normalizeUrl(site.url);
         console.log('Comparing:', normalized, 'with', siteNormalized, 'from', site.url);
         return siteNormalized === normalized;
     });
+    // Fallback: match by hostname only (handles sites with subpaths like /Portfolio-Website/)
+    if (index === -1) {
+        const normalizedHost = normalized.split('/')[0];
+        index = sites.findIndex(site => {
+            const siteHost = normalizeUrl(site.url).split('/')[0];
+            return siteHost === normalizedHost;
+        });
+    }
     console.log('Found index:', index);
     return index;
 }
