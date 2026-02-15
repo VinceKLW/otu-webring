@@ -1,7 +1,7 @@
 // Site data
 const sites = [
     { name: "Vincent Wong", url: "https://vinceklwong.com", year: 2027, recent_internship: "Shopify" },
-    { name: "Shams Haroon", url: "https://shamsharoon.com", year: 2027, recent_internship: "Wealthsimple" },
+    { name: "Shams Haroon", url: "https://shamsharoon.com", year: 2028, recent_internship: "Wealthsimple" },
     { name: "Julian Cruzet", url: "https://juliancruzet.ca", year: 2027, recent_internship: "Shopify" },
     { name: "Jon McKesey", url: "https://jonathanmckesey.com/", year: 2027, recent_internship: "Verily" },
     { name: "Jun Bin Cheng", url: "https://jb-cheng.github.io/", year: 2026, recent_internship: "H.H Angus & Associates Ltd." },
