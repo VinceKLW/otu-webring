@@ -10,7 +10,7 @@ const sites = [
     { name: "Umad Akram", url: "https://umadakram.com/", year: 2027, recent_internship: "Canadian Imperial Bank of Commerce" },
     { name: "Ali Hakkani", url: "https://alihakkani.vercel.app/", year: 2027, recent_internship: "N/A" },
     { name: "DJ Leamen", url: "https://djleamen.ca", year: 2028, recent_internship: "Kyndryl" },
-    // { name: "Sunny Patel", url: "https://sunnypatel.net", year: 2027, recent_internship: "IBM" },
+    { name: "Sunny Patel", url: "https://sunnypatel.net", year: 2027, recent_internship: "IBM" },
     { name: "Chris Panetta", url: "https://chrispanetta.com", year: 2027, recent_internship: "Verkada" },
     { name: "Matthew Serrano", url: "https://mattsrano.com", year: 2028, recent_internship: "Ontario Public Service" }
 ];
