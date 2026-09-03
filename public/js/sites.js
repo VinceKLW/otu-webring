@@ -12,7 +12,8 @@ const sites = [
     { name: "DJ Leamen", url: "https://djleamen.ca", year: 2028, recent_internship: "Kyndryl" },
     { name: "Sunny Patel", url: "https://sunnypatel.net", year: 2027, recent_internship: "IBM" },
     { name: "Chris Panetta", url: "https://chrispanetta.com", year: 2027, recent_internship: "Verkada" },
-    { name: "Matthew Serrano", url: "https://mattsrano.com", year: 2028, recent_internship: "Ontario Public Service" }
+    { name: "Matthew Serrano", url: "https://mattsrano.com", year: 2028, recent_internship: "Ontario Public Service" },
+    { name: "Kershan Arulneswaran", url: "https://kersharul.com", year: 2027, recent_internship: "MDA Space" }
 ];
 
 // YOU CAN ADD RECENT_INTERNSHIP OR GENERAL DESCRIPTION! (ex. Software Engineer, Full-Stack Developer, etc.)
