@@ -14,6 +14,7 @@ const sites = [
     { name: "Chris Panetta", url: "https://chrispanetta.com", year: 2027, recent_internship: "Verkada" },
     { name: "Matthew Serrano", url: "https://mattsrano.com", year: 2028, recent_internship: "Ontario Public Service" },
     { name: "Eric Beaulne", url: "https://er-ic.ca/", year: 2028, recent_internship: "N/A" }
+    { name: "Kershan Arulneswaran", url: "https://kersharul.com", year: 2027, recent_internship: "MDA Space" }
 ];
 
 // YOU CAN ADD RECENT_INTERNSHIP OR GENERAL DESCRIPTION! (ex. Software Engineer, Full-Stack Developer, etc.)
