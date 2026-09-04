@@ -13,7 +13,7 @@ const sites = [
     { name: "Sunny Patel", url: "https://sunnypatel.net", year: 2027, recent_internship: "IBM" },
     { name: "Chris Panetta", url: "https://chrispanetta.com", year: 2027, recent_internship: "Verkada" },
     { name: "Matthew Serrano", url: "https://mattsrano.com", year: 2028, recent_internship: "Ontario Public Service" },
-    { name: "Eric Beaulne", url: "https://er-ic.ca/", year: 2028, recent_internship: "N/A" }
+    { name: "Eric Beaulne", url: "https://er-ic.ca/", year: 2028, recent_internship: "N/A" },
     { name: "Kershan Arulneswaran", url: "https://kersharul.com", year: 2027, recent_internship: "MDA Space" }
 ];
 
